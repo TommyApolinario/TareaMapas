@@ -32,15 +32,6 @@ public class MainActivity : AppCompatActivity() , OnMapReadyCallback, GoogleMap.
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
 
-
-//        map.addMarker(new MarkerOptions()
-//                .position(new LatLng(-34, 151))
-//                .title("Marker in Sydney")).setTag(0);
-//
-//        map.addMarker(new MarkerOptions()
-//                .position(new LatLng(-0.10820363732123867, -78.47378477657662))
-//                .title("Marker in Ecuader")).setTag(1);
-        //map.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         AddMarker()
         map!!.setInfoWindowAdapter(InfoWindowLugar(this, "personal"))
     }
@@ -48,7 +39,7 @@ public class MainActivity : AppCompatActivity() , OnMapReadyCallback, GoogleMap.
     fun AddMarker() {
         val arrayRequest = JsonArrayRequest(
             Request.Method.GET,
-            "https://my-json-server.typicode.com/RobertoSuarez/mymap/sitios",
+            "https://my-json-server.typicode.com/TommyApolinario/TareaMapas/sitios",
             null,
             { response ->
                 val gson = Gson()

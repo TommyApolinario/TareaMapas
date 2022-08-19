@@ -46,7 +46,7 @@ class InfoWindowLugar(var context: Context, var titulo: String) :
                 descripcion = "Ecuador es un Pais"
                 urlImage = ""
                 faculta = "Ciencia de la ingenieria"
-                decano = "Roberto El doc"
+                decano = "Tommy Apolinario"
                 ubicacion = "Quevedo"
                 posicion = LatLng(-0.10820363732123867, -78.47378477657662)
             }
