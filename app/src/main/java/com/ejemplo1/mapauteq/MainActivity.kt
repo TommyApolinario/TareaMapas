@@ -72,23 +72,5 @@ public class MainActivity : AppCompatActivity() , OnMapReadyCallback, GoogleMap.
         cola!!.add(arrayRequest)
     }
 
-    fun onChangeTypeMap(v: View?) {
-        // Dependiendo del tipo de mapa se va a iterar.
-        println(map!!.mapType)
-        when (map!!.mapType) {
-            GoogleMap.MAP_TYPE_NORMAL -> map!!.mapType = GoogleMap.MAP_TYPE_SATELLITE
-            GoogleMap.MAP_TYPE_SATELLITE -> map!!.mapType = GoogleMap.MAP_TYPE_TERRAIN
-            GoogleMap.MAP_TYPE_TERRAIN -> map!!.mapType = GoogleMap.MAP_TYPE_HYBRID
-            GoogleMap.MAP_TYPE_HYBRID -> map!!.mapType = GoogleMap.MAP_TYPE_NORMAL
-        }
-    }
-
-    override fun onMapClick(latLng: LatLng) {
-        map!!.clear()
-        val markerOptions = MarkerOptions()
-        markerOptions.position(latLng)
-        map!!.animateCamera(CameraUpdateFactory.newLatLng(latLng))
-        val marker = map!!.addMarker(markerOptions)
-        marker!!.showInfoWindow()
-    }
+    
 }
